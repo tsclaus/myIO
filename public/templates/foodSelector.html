@@ -1,0 +1,22 @@
+<div layout="row" ng-form="form">
+	<md-autocomplete md-selected-item="selectedItem" md-selected-item-change="getInfo(true)" md-search-text="searchText" md-items="item in search(searchText)" md-item-text="item.name" md-min-length="3" md-floating-label="Food Search" md-input-name="food" flex md-input-minlength="3">
+		<md-item-template><span md-highlight-text="searchText">{{item.name}}</span></md-item-template>
+		<md-not-found>
+    		No matches found.
+  		</md-not-found>
+		<div ng-messages="form.food.$error">
+			<div ng-message="minlength">Enter at least 3 letters</div>
+		</div>
+	</md-autocomplete>
+	<md-input-container>
+		<label>Quantity</label>
+		<input ng-model="quantity" ng-change="food.apportion(quantity, serving)" type="number" ng-disabled="!food">
+	</md-input-container>
+	<md-input-container class="food-selector-quantity">
+		<label>Serving</label>
+		<md-select ng-model="serving" ng-change="food.apportion(quantity, serving)" ng-disabled="!food">
+			<md-option ng-repeat="serving in food.servings track by $index" value="{{$index}}" ng-bind="serving.name">
+			</md-option>
+		</md-select>
+	</md-input-container>
+</div>

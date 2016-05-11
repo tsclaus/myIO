@@ -1,0 +1,24 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.food-selector-quantity {
+	min-width: 10em;
+}
+
+/* fixes */
+
+/* Material Autocomplete progress bar
+	progress bar css is currently incompatible with floating label autocompletes
+	floating label also has an error with its bottom padding
+	both have already been fixed in 1.1, fixes should be removed when 1.1 is released/updated to
+*/
+
+md-autocomplete md-progress-linear {
+	display: none;
+}
+
+md-autocomplete[md-floating-label] md-input-container {
+	padding-bottom: 2px;
+}

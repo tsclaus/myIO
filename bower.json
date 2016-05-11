@@ -1,0 +1,27 @@
+{
+  "name": "myIO",
+  "description": "Food and nutrition tracker",
+  "main": "application.js",
+  "authors": [
+    "Tahsis Claus"
+  ],
+  "license": "BSD-2-Clause",
+  "homepage": "https://github.com/tsclaus/myIO",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1",
+    "angular": "1.4",
+    "angular-resource": "1.4",
+    "angular-messages": "1.4",
+    "angular-aria": "1.4",
+    "angular-animate": "1.4",
+    "angular-material": "1",
+    "lodash": "^4.11.2"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainCtrl">
+	<head>
+		<link rel="stylesheet" type="text/css" href="public/dep/angular-material/angular-material.css">
+		<link rel="stylesheet" type="text/css" href="application.css">
+	</head>
+	<body layout="row">
+		<div flex>
+			<div food-selector="food"></div>
+			<div ng-repeat="(nutrient, amount) in food.nutrition">{{nutrient}}: {{amount}}</div>
+			<!--md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="item in search(searchText)" md-item-text="item.name" md-min-length="3">
+				<md-item-template>
+    				<span md-highlight-text="searchText">{{item.name}}</span>
+  				</md-item-template>
+			</md-autocomplete-->
+		</div>
+		<div flex>
+		</div>
+		<!-- beginning of script -->
+		<script src="public/dep/jquery/dist/jquery.js"></script>
+		<script src="public/dep/angular/angular.js"></script>
+		<script src="public/dep/angular-resource/angular-resource.js"></script>
+		<script src="public/dep/angular-animate/angular-animate.js"></script>
+		<script src="public/dep/angular-aria/angular-aria.js"></script>
+		<script src="public/dep/angular-messages/angular-messages.js"></script>
+		<script src="public/dep/angular-material/angular-material.js"></script>
+		<script src="public/dep/lodash/lodash.js"></script>
+		<script src="application.js"></script>
+	</body>
+</html>
